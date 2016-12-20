@@ -28,6 +28,8 @@ RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
     mkdir -p /etc/ansible                        && \
     echo 'localhost' > /etc/ansible/hosts
 
+# Define working directory.
+WORKDIR /data
 
-# default command: display Ansible version
-CMD [ "ansible-playbook", "--version" ]
+# Define default command.
+CMD ["sh"]
